@@ -1,0 +1,89 @@
+{
+    // VS Code Extension Recommendations for Password Manager Project
+    // VS Code will prompt you to install these when you open the project
+    
+    "recommendations": [
+        // ============================================================
+        // ESSENTIAL - Must Have
+        // ============================================================
+        
+        // Python language support with IntelliSense, linting, debugging
+        "ms-python.python",
+        
+        // Fast Python language server for IntelliSense
+        "ms-python.vscode-pylance",
+        
+        // Python debugging
+        "ms-python.debugpy",
+        
+        
+        // ============================================================
+        // HIGHLY RECOMMENDED - Makes Life Easier
+        // ============================================================
+        
+        // Auto-generate Python docstrings
+        "njpwerner.autodocstring",
+        
+        // Better comment highlighting
+        "aaron-bond.better-comments",
+        
+        // Shows inline error messages
+        "usernamehw.errorlens",
+        
+        // Colorize indentation levels (helpful for Python!)
+        "oderwat.indent-rainbow",
+        
+        // Bracket pair colorization (helps track nested code)
+        "coenraads.bracket-pair-colorizer-2",
+        
+        // Git integration improvements
+        "eamodio.gitlens",
+        
+        
+        // ============================================================
+        // NICE TO HAVE - Quality of Life
+        // ============================================================
+        
+        // Path autocomplete
+        "christian-kohler.path-intellisense",
+        
+        // Better file icons in sidebar
+        "pkief.material-icon-theme",
+        
+        // TODO highlight
+        "wayou.vscode-todo-highlight",
+        
+        // Code spell checker
+        "streetsidesoftware.code-spell-checker",
+        
+        // Markdown preview enhanced
+        "shd101wyy.markdown-preview-enhanced",
+        
+        // JSON tools
+        "zainchen.json",
+        
+        
+        // ============================================================
+        // SECURITY & BEST PRACTICES
+        // ============================================================
+        
+        // Python security linting
+        "ms-python.flake8",
+        
+        // YAML support (for future config files)
+        "redhat.vscode-yaml",
+        
+        // EditorConfig support (consistent coding style)
+        "editorconfig.editorconfig"
+    ],
+    
+    // ============================================================
+    // Extensions NOT recommended (conflicts or unnecessary)
+    // ============================================================
+    
+    "unwantedRecommendations": [
+        // These might conflict with our setup
+        "ms-python.vscode-pylint",  // We use flake8
+        "formulahendry.code-runner"  // We have custom debug configs
+    ]
+}

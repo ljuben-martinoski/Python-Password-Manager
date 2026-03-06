@@ -1,0 +1,126 @@
+{
+    // VS Code Tasks Configuration for Password Manager
+    // Run tasks: Ctrl+Shift+P → "Tasks: Run Task"
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // Quick run of the password manager
+            "label": "▶️ Run Password Manager",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "password_manager.py"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+        {
+            // Install all dependencies from requirements.txt
+            "label": "📦 Install Dependencies",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                "requirements.txt"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            // Update pip to latest version
+            "label": "🔄 Update pip",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "--upgrade",
+                "pip"
+            ],
+            "problemMatcher": []
+        },
+        {
+            // Check which packages are installed
+            "label": "📋 List Installed Packages",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pip",
+                "list"
+            ],
+            "problemMatcher": []
+        },
+        {
+            // Freeze current packages to requirements.txt
+            "label": "💾 Freeze Requirements",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pip",
+                "freeze"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            // Check Python version
+            "label": "🐍 Check Python Version",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "--version"
+            ],
+            "problemMatcher": []
+        },
+        {
+            // Clean up Python cache files
+            "label": "🧹 Clean Cache Files",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-c",
+                "import pathlib; [p.unlink() for p in pathlib.Path('.').rglob('*.py[co]')]; [p.rmdir() for p in pathlib.Path('.').rglob('__pycache__')]"
+            ],
+            "problemMatcher": [],
+            "windows": {
+                "command": "python"
+            },
+            "linux": {
+                "command": "python3"
+            },
+            "osx": {
+                "command": "python3"
+            }
+        },
+        {
+            // Run with verbose error messages (for troubleshooting)
+            "label": "🔍 Run with Verbose Output",
+            "type": "shell",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-v",
+                "password_manager.py"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

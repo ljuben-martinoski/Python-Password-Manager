@@ -1,0 +1,7 @@
+# Cryptography library for secure encryption (AES-256)
+cryptography>=42.0.0 
+# For colored terminal output (makes UI more professional)
+colorama>=0.4.6  
+# For beautiful table formatting in terminal
+tabulate>=0.9.0  
+

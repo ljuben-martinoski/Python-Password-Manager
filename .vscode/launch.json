@@ -1,0 +1,67 @@
+{
+    // VS Code Debug Configuration for Password Manager
+    // Press F5 to start debugging with these configurations
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Main configuration - Run the password manager
+            "name": "🔐 Run Password Manager",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/password_menager.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONUNBUFFERED": "1"
+            },
+            "stopOnEntry": false,
+            "showReturnValue": true
+        },
+        {
+            // Debug with breakpoint on entry
+            "name": "🐛 Debug Password Manager (Stop on Entry)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/password_menager.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYTHONUNBUFFERED": "1"
+            },
+            "stopOnEntry": true,
+            "showReturnValue": true
+        },
+        {
+            // Run whatever file is currently open
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            // Debug with all code (including library code)
+            "name": "🔬 Debug Everything (including libraries)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/password_menager.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONUNBUFFERED": "1"
+            },
+            "showReturnValue": true
+        },
+        {
+            // Run with Python arguments (for future expansion)
+            "name": "Python: With Arguments",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/password_menager.py",
+            "console": "integratedTerminal",
+            "args": [],
+            "justMyCode": true
+        }
+    ]
+}
